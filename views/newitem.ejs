@@ -2,21 +2,44 @@
 <html>
   <head>
         <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
-    <p>Item List</p>
-    <form class="" action="/newitem" method="post" enctype="multipart/form-data">
-      <input type="text" name="name" placeholder="item name">
-      <input type="text" name="description" placeholder="description">
-      <input type="file" name="image" value="test">
-      <button type="submit" name="button">Submit</button>
-    </form>
+    <div class = "container">
+      <div class = "row">
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <p>Upload item to rent</p>
+          <form class="" action="/newitem" method="post" enctype="multipart/form-data">
+            <input class = "form-control" type="text" name="name" placeholder="item name">
+            <input class = "form-control" type="text" name="description" placeholder="description">
+            <input class = "form-control" type="text" name="category" placeholder="description">
+            <input class = "form-control" type="text" name="condition" placeholder="description">
+            <input class = "form-control" type="text" name="description" placeholder="description">
+            <input class = "form-control" type="file" name="image" value="test">
+            <button class = "form-control btn-danger" type="submit" name="button">Submit</button>
+          </form>
+        </div>
+  </div>
+</div>
 
+
+<div class="container">
+  <div class="row">
     <% items.forEach(function(item){%>
-      <p><%=item.name %></p>
-      <p><%=item.description%> </p>
-      <img src="<%=item.image %>" alt="">
+      <div class="col-sm-6 col-md-4 col-lg-3 thumbnail">
+        <p><%=item.name %></p>
+        <img src="<%=item.image %>" class = "thumbnail" alt="">
+        <p><%=item.description%> </p>
+        <div class="col-sm-12 col-md-4 col-lg-3">
+          <button type="button" name="button" class="btn-success">Button1</button>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-3">
+          <button type="button" name="button" class="btn-success">Button2</button>
+        </div>
+      </div>
     <% });%>
+  </div>
+</div>
 
   </body>
 </html>

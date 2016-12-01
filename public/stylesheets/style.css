@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+.thumnail {
+  height: 172px;
+  width: 300px;
+}
+
+/*button {
+  display: inline-block;
+}*/
