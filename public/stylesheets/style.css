@@ -93,11 +93,27 @@ margin-top: 8px;
     min-width: 200px;
 }
 
-.thumnail {
-  height: 172px;
-  width: 300px;
+.thumnbail-image {
+  height: 400px;
+  width: 200px;
+  border-color: blue;
 }
 
-/*button {
-  display: inline-block;
+/*.thumbnail {
+  height: 400px;
+  width: 200px;
 }*/
+/*
+.container .row img  {
+  height: 300px !important;
+  width: 200px !important;
+  border-radius: 50% !important;
+}
+
+.test {
+  color: red;
+}
+.test2 {
+  color: red;
+  text-align: center;*/
+}
