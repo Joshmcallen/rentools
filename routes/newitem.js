@@ -5,7 +5,7 @@ var Item = require('../models/item');
 
 //user dashboard
 router.get('/', function(req, res, next){
-  Item.find({}, function(err, items){
+  Item.find({}, null, {sort: {date: -1}}, function(err, items){
 
     res.render('newitem', {title:"new item", items: items});
     //res.send(items);
@@ -27,6 +27,7 @@ router.post('/', function(req, res, next){
     res.redirect('newitem', {title: "add item"});
   });
 });
+//////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 //page with form to add item
@@ -51,13 +52,10 @@ router.post('/additem', function(req, res, next){
     res.redirect('/newitem');
   });
 });
-
-
 ///////////////////////////////////////////////////////////////////
-
+///////////////////////////////////////////////////////////////////
 
 //go to page of specific item
-///////////////////////////////////////////////////////////////////
 router.get('/:id', function(req, res, next){
   var id = req.params.id;
   Item.findById(id, function(err, items) {
@@ -69,12 +67,12 @@ router.get('/:id', function(req, res, next){
      }
   });
 });
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
 
 ///delete item
-//////////////////////////////////////////////////////////////
 router.post('/:id', function(req, res, next){
   console.log('im in route')
-
 
   var id = req.params.id;
   console.log(id);
@@ -88,7 +86,8 @@ router.post('/:id', function(req, res, next){
     }
   });
 });
-
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
 
 
 
