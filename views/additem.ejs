@@ -6,10 +6,15 @@
   </head>
   <body>
 
-    <div class = "container">
+    <% include partials/navbartwo %>
+
+    <!-- <div class="spacingdiv">
+    </div> -->
+
+    <div class = "container addform">
       <div class = "row">
         <div class="form-group">
-          <p><%=title%></p>
+          <label>Add Item</label>
           <form class="" action="/newitem/additem" method="post" enctype="multipart/form-data">
             <input class = "form-control" type="text" name="name" placeholder="item name">
             <input class = "form-control" type="text" name="description" placeholder="description">
