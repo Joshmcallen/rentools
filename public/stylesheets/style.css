@@ -10,7 +10,7 @@ box-sizing: border: box;
    display: table;
    width: 100%;
    height: 600px;
-   background-image: url(http://previews.123rf.com/images/nk2549/nk25491302/nk2549130200083/18092817-Carpentry-construction-hardware-tools-collage-with-wood-plank-texture-background-Vector-template-des-Stock-Vector.jpg);
+   background-image: url(https://tctechcrunch2011.files.wordpress.com/2013/08/tools.jpg);
    background-size: cover;
    background-position: center center;
 
@@ -195,9 +195,7 @@ margin-top: 8px;
 #imagebox {
   border: 1px solid #95a5a6;
 }
-/*#testbox {
-  border: 1px solid blue;
-}*/
+
 #item-info-box {
   border: .2em solid #95a5a6;
   max-width: 70%;
@@ -221,19 +219,9 @@ position: relative;
   height: 100px;
   width: 100px;
 }
-=======
+
 .editobject {
   display: block;
   margin-top: 5em;
   margin-bottom: 5em;
 }
-
-
-/*
-.editformtwo {
-margin-top: 10em;
-}*/
-/*.spacingdiv {
-  margin-bottom: 10em;
-}*/
->>>>>>> master
