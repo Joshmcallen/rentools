@@ -5,16 +5,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
-
     <% include partials/navbartwo %>
 
-    <!-- <div class="spacingdiv">
-    </div> -->
+    <a href="/newitem" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span>Back to Dashboard</a>
+
 
     <div class = "container addform">
       <div class = "row">
         <div class="form-group">
-          <label>Add Item</label>
+          <label>Post New Item</label>
           <form class="" action="/newitem/additem" method="post" enctype="multipart/form-data">
             <input class = "form-control" type="text" name="name" placeholder="item name">
             <input class = "form-control" type="text" name="description" placeholder="description">
@@ -33,17 +32,38 @@
               <<option>Poor</option>
             </select>
             <input class = "form-control" type="file" name="image" value="test">
-            <button class = "form-control btn-danger" type="submit">Submit</button>
+            <button class = "form-control btn-danger" type="submit">Post Item</button>
           </form>
         </div>
   </div>
 </div>
 
 
-<a href="/newitem">Back to dashboard</a>
+<!-- attempt at doing a map -->
+<center>
+  <h3>Location</h3>
+  <h2>this is where map would go</h2>
+</center>
+<div id="map">
+  <script>
+    function initMap() {
+    var mission = {lat: 26.215, lng: -98.325};
+    var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: mission
+    });
+    var marker = new google.maps.Marker({
+    position: mission,
+    map: map
+    });
+    }
+  </script>
+  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBagv-43cAtG0CGsWpT7oBQbcSZbbfDxjA&amp;callback=initMap"></script>
+</div>
+<!-- end attempt at map -->
 
 
-<% include partials/footer %>
+<% include partials/footertwo %>
 
 </body>
 </html>

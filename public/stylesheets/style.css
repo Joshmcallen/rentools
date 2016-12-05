@@ -117,7 +117,9 @@ margin-top: 8px;
   color: red;
   text-align: center;*/
 }
-
+.jumbotron {
+  background-color: #ffffff !important;
+}
 .addform {
   max-width: 40%;
   margin-top: 5em;
@@ -126,17 +128,91 @@ margin-top: 8px;
   max-width: 50%;
   margin-bottom: 5em;
 }
+.btn-danger {
+  color: #18bc9c;
+  background-color: #18bc9c !important;
+  /*border: 1px solid blue !important;*/
+  border-color: #18bc9c !important;
+}
+.btn-danger:hover {
+  background-color: #1baa8e !important;
+  border-color: #1baa8e !important;
+}
+
 .editobject {
   display: block;
-  margin-top: 5em;
+  max-width: 50%;
   margin-bottom: 5em;
+  border: 1px solid #dfdfdf;
+}
+.editobject .box1 {
+  border:1px solid black;
+}
+.editobject .box1 p {
+  border:1px solid black;
+  position: relative;
+}
+.editobject .box2 {
+  border:1px solid black;
 }
 
 
-/*
-.editformtwo {
-margin-top: 10em;
+
+.footertwo {
+  background-color: #18bc9c;
+  padding-bottom: 0em;
+  margin-top: 9em;
+}
+.footertwo ul {
+  list-style-type: none;
+}
+.footertwo ul li a{
+  color: black;
+}
+.footertwo ul li a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+
+#box1 {
+  border: 1px solid black;
+}
+
+}
+#detailsbox {
+  border: 1px solid black;
+}
+#managebox {
+  border: 1px solid black;
+}
+
+#imagebox {
+  border: 1px solid #95a5a6;
+}
+/*#testbox {
+  border: 1px solid blue;
 }*/
-/*.spacingdiv {
-  margin-bottom: 10em;
-}*/
+#item-info-box {
+  border: .2em solid #95a5a6;
+  max-width: 70%;
+  margin: auto;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.inline-button1 {
+  float: left;
+  margin-top: 3em;
+  position: relative;
+}
+.inline-button2 {
+float: right;
+margin-top: 3em;
+position: relative;
+}
+
+.mini-thumbnail {
+  height: 100px;
+  width: 100px;
+}
