@@ -54,7 +54,6 @@ router.post('/additem', function(req, res, next){
 });
 ///////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////
-
 //go to page of specific item
 router.get('/:id', function(req, res, next){
   var id = req.params.id;
@@ -63,7 +62,7 @@ router.get('/:id', function(req, res, next){
       console.log("item not found")
       }
     else {
-<<<<<<< HEAD
+
        res.render('itempage', {title: 'itempage', items:items})
      }
   });
@@ -80,15 +79,8 @@ router.get('/edit/:id', function(req, res, next){
      }
   });
 });
-///delete specific item
-=======
-       res.render('edititem', {title: 'edit', items:items})
-     }
-  });
-});
 ///////////////////////////////////////////////////////////////////
 ///delete item
->>>>>>> master
 router.post('/:id', function(req, res, next){
   console.log('im in route')
 
@@ -105,7 +97,6 @@ router.post('/:id', function(req, res, next){
   });
 });
 //edit item
-<<<<<<< HEAD
 // router.put('/:id', function(req, res, next){
 //   // Item.findById(id, function(err, items) {
 //   //   if(err){console.log("item not found")}
@@ -135,8 +126,7 @@ router.post('/:id', function(req, res, next){
 
 // });
 
-=======
-router.put('/:id', function(req, res, next){
+// router.put('/:id', function(req, res, next){
   // Item.findById(id, function(err, items) {
   //   if(err){console.log("item not found")}
   //   else {res.render('edititem', {title: 'Edit', items:items})}
@@ -144,29 +134,29 @@ router.put('/:id', function(req, res, next){
   //   var item = new Item(req.body);
   //
   //   //multer - get image from multer and set path
-    var multer_image = "";
-    req.file ? multer_image = `/images/uploads/${req.file.filename}` : multer_image = `/images/uploads/default.jpg`;
-  //   //now set item.image to multer_image url
-    item.image = multer_image;
-  //
-  //   item.save();
-  //   res.redirect('/dashboard');
-  // });
-console.log(req.body);
-var id = req.params.id;
-  Item.findByIdAndUpdate(id, { $set: { item: 'req.body' }}, { new: true }, function (err, items) {
-    if (err) return handleError(err);
-    console.log(req.body);
-    res.redirect('/dashboard');
-  });
+//     var multer_image = "";
+//     req.file ? multer_image = `/images/uploads/${req.file.filename}` : multer_image = `/images/uploads/default.jpg`;
+//   //   //now set item.image to multer_image url
+//     item.image = multer_image;
+//   //
+//   //   item.save();
+//   //   res.redirect('/dashboard');
+//   // });
+// console.log(req.body);
+// var id = req.params.id;
+//   Item.findByIdAndUpdate(id, { $set: { item: 'req.body' }}, { new: true }, function (err, items) {
+//     if (err) return handleError(err);
+//     console.log(req.body);
+//     res.redirect('/dashboard');
+//   });
 
 
->>>>>>> master
+
 
 ///////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////
 
-});
+
 
 
 ///////////////////////////////////////////////////////////////////
